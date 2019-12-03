@@ -9,9 +9,9 @@ Compares various sorting algorithms in order to showcase time efficiency benefit
 - Quicksort
 - Merge Sort
 - Insertion Sort
+- Heap Sort
 
 ### Still to come:
-- Heap Sort
 - Select Sort
 - Bucket Sort
 - Radix Sort

@@ -10,7 +10,7 @@
 
 public class outputData {
 
-	static void writeDat(int data[], linked li, int max) {
+	static void writeDat(int data[], linked li, Heap theHeap, int max) {
 
 		// Duplicate data for different sorting algorithms.
 		int[] data_b = data.clone();
@@ -82,11 +82,28 @@ public class outputData {
 		int end_q = getTime.time();
 		int time_q = end_q - start_q;
 
-		// Displays results to console.
+		// Troubleshooting, displays to console.
 		// System.out.println("Quicksort: ");
 		// quickSort.display(max, data_q);
 
 		System.out.println("Quicksort      : " + time_q + " milliseconds.\n");
+		
+		/**************************/
+		/* Beginning of Heap Sort */
+		/**************************/
+
+		int start_h = getTime.time();
+
+		Heap.heapCall(max, theHeap);
+
+		int end_h = getTime.time();
+		int time_h = end_h - start_h;
+
+		// Troubleshooting, displays to console.
+		// System.out.println("Heap Sort: ");
+		// Heap.display(max);
+	
+		System.out.println("Heap Sort      : " + time_h + " milliseconds.\n");
 
 	}
 }

@@ -38,4 +38,23 @@ public class makeData {
 
 		return li;
 	}
+
+	/*
+	 * Takes the random data from the array and fills it into a heap.
+	 */
+	public static Heap randomHeap(int[] data, int max) {
+
+		Heap theHeap = new Heap(max);
+
+		int temp = 0;
+
+		for (int i = 0; i < max; i++) {
+			temp = data[i];
+			Hnode newNode = new Hnode(temp);
+			theHeap.insertAt(i, newNode);
+			theHeap.incrementSize();
+		}
+
+		return theHeap;
+	}
 }

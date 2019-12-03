@@ -17,19 +17,20 @@ public class sortTest {
 		int start = getTime.time();
 
 		// START PROCESS HERE !!!
-		int max = 10000;
+		int max = 2000;
 		System.out.println("Number of entries to sort: " + max);
 
 		// Creates datasets.
 		int[] data = makeData.randomArr(max);
 		linked li = makeData.randomLi(data);
+		Heap theHeap = makeData.randomHeap(data, max);
 
-		outputData.writeDat(data, li, max);
+		outputData.writeDat(data, li, theHeap, max);
 
 		int end = getTime.time();
 		int elapsed = end - start;
 
-		System.out.println("Time for entire program was " + elapsed + " milliseconds.");
+		System.out.println("Whole program  : " + elapsed + " milliseconds.");
 
 	}
 }
