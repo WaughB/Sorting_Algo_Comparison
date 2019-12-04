@@ -33,7 +33,7 @@ public class outputData {
 		// System.out.println("Bubble Sort: ");
 		// BubbleSort.display(max, data_b);
 
-		System.out.println("Bubble Sort    : " + time_b + " milliseconds.\n");
+		System.out.println("Bubble Sort    : " + time_b + " milliseconds.");
 
 		/****************************/
 		/* Beginning of Insert Sort */
@@ -50,7 +50,7 @@ public class outputData {
 		// System.out.println("Insert Sort: ");
 		// insertSort.display(max, data_i);
 
-		System.out.println("Insertion Sort : " + time_i + " milliseconds.\n");
+		System.out.println("Insertion Sort : " + time_i + " milliseconds.");
 
 		/*******************************/
 		/* Beginning of Selection Sort */
@@ -67,7 +67,24 @@ public class outputData {
 		// System.out.println("Selection Sort: ");
 		// selectSort.display(data_s, max);
 
-		System.out.println("Selection Sort : " + time_s + " milliseconds.\n");
+		System.out.println("Selection Sort : " + time_s + " milliseconds.");
+
+		/**************************/
+		/* Beginning of Heap Sort */
+		/**************************/
+
+		int start_h = getTime.time();
+
+		Heap.heapCall(max, theHeap);
+
+		int end_h = getTime.time();
+		int time_h = end_h - start_h;
+
+		// Troubleshooting, displays to console.
+		// System.out.println("Heap Sort: ");
+		// Heap.display(max);
+
+		System.out.println("Heap Sort      : " + time_h + " milliseconds.");
 
 		/***************************/
 		/* Beginning of Merge Sort */
@@ -84,7 +101,7 @@ public class outputData {
 		// System.out.println("Merge Sort: ");
 		// linked.display(li);
 
-		System.out.println("Merge sort     : " + time_m + " milliseconds.\n");
+		System.out.println("Merge sort     : " + time_m + " milliseconds.");
 
 		/**************************************************/
 		/* Beginning of Quicksort, median-of-three method */
@@ -104,24 +121,7 @@ public class outputData {
 		// System.out.println("Quicksort: ");
 		// quickSort.display(max, data_q);
 
-		System.out.println("Quicksort      : " + time_q + " milliseconds.\n");
-
-		/**************************/
-		/* Beginning of Heap Sort */
-		/**************************/
-
-		int start_h = getTime.time();
-
-		Heap.heapCall(max, theHeap);
-
-		int end_h = getTime.time();
-		int time_h = end_h - start_h;
-
-		// Troubleshooting, displays to console.
-		// System.out.println("Heap Sort: ");
-		// Heap.display(max);
-
-		System.out.println("Heap Sort      : " + time_h + " milliseconds.\n");
+		System.out.println("Quicksort      : " + time_q + " milliseconds.");
 
 	}
 }
