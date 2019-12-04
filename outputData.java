@@ -14,6 +14,7 @@ public class outputData {
 
 		// Duplicate data for different sorting algorithms.
 		int[] data_b = data.clone();
+		int[] data_s = data.clone();
 		int[] data_i = data.clone();
 		int[] data_q = data.clone();
 
@@ -51,6 +52,23 @@ public class outputData {
 
 		System.out.println("Insertion Sort : " + time_i + " milliseconds.\n");
 
+		/*******************************/
+		/* Beginning of Selection Sort */
+		/*******************************/
+
+		int start_s = getTime.time();
+
+		selectSort.sort(data_s, max);
+
+		int end_s = getTime.time();
+		int time_s = end_s - start_s;
+
+		// Troubleshooting, displays to console.
+		// System.out.println("Selection Sort: ");
+		// selectSort.display(data_s, max);
+
+		System.out.println("Selection Sort : " + time_s + " milliseconds.\n");
+
 		/***************************/
 		/* Beginning of Merge Sort */
 		/***************************/
@@ -87,7 +105,7 @@ public class outputData {
 		// quickSort.display(max, data_q);
 
 		System.out.println("Quicksort      : " + time_q + " milliseconds.\n");
-		
+
 		/**************************/
 		/* Beginning of Heap Sort */
 		/**************************/
@@ -102,7 +120,7 @@ public class outputData {
 		// Troubleshooting, displays to console.
 		// System.out.println("Heap Sort: ");
 		// Heap.display(max);
-	
+
 		System.out.println("Heap Sort      : " + time_h + " milliseconds.\n");
 
 	}

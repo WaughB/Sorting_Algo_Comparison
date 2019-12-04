@@ -17,8 +17,8 @@ public class sortTest {
 		int start = getTime.time();
 
 		// START PROCESS HERE !!!
-		int max = 2000;
-		System.out.println("Number of entries to sort: " + max);
+		int max = 10000;
+		System.out.println("Data points    : " + max);
 
 		// Creates datasets.
 		int[] data = makeData.randomArr(max);
