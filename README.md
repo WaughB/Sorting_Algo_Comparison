@@ -1,4 +1,4 @@
-# Sorting_Algo_Comparison
+# Sorting Algorithm Comparison
 
 Compares various sorting algorithms in order to showcase time efficiency benefits over other algorithms. 
 
@@ -15,6 +15,7 @@ Compares various sorting algorithms in order to showcase time efficiency benefit
 ### Still to come:
 - Bucket Sort
 - Radix Sort
+- Shellsort
 
 ## Data Creation
 
